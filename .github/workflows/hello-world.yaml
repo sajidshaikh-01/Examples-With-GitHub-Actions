@@ -1,0 +1,17 @@
+name: first file
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Hello world action step
+        run: echo "Hello world!"
+
+      - name: Second step
+        run: pwd
+        
+      - name: Third step
+        run: ls -la
